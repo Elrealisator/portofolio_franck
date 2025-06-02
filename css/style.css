@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,400;0,700;0,800;1,700;1,800;1,900&display=swap');
 /* theme du site */
 :root{
     --mtfd-1: 257;
@@ -275,11 +275,16 @@ background: red;
 
        }
        .heading{
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+        text-shadow: 4px 4px 4px #aaa;
            color: var(--heading-color);
-           font-size: 3rem;
-           font-family: "Abril Fatface", cursive;
            font-weight: 400;
            line-height: 1.3;
+ 
+       }
+       #franck{
+           font-family: 'poppins', sans-serif;
        }
        .text{
            color: var(--text-color);
@@ -1163,7 +1168,7 @@ overflow: hidden;
                 }
 
 
-                @media (max-width: 1000px) {
+                @media screen and (max-width: 1000px) {
                     .sub-heading{
                         font-size: .75rem;
                     }
@@ -1259,7 +1264,7 @@ overflow: hidden;
                     }
                 }
 
-                @media (max-width: 768px){
+                @media screen and (max-width: 768px){
                     :root{
                         --section-padding: 4.5rem;
                     }
@@ -1545,7 +1550,7 @@ overflow: hidden;
                         bottom: 30%;
                     }
                 }
-                @media (max-width: 500px){
+                @media screen and (max-width: 500px){
                     .container{
                         padding: 0 1rem;
                     }
