@@ -12,11 +12,6 @@ window.addEventListener("scroll", () => {
 
 })
 
-
-
-
-
-
 function activeLink() {
     let sections = document.querySelectorAll("section[id]");
     let passedSections = Array.from(sections)
