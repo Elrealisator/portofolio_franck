@@ -1646,3 +1646,14 @@ overflow: hidden;
                         margin-top: 1rem;
                     }
                 }
+                @media (hover: hover) {
+                    .nav-link:hover::after { 
+                        width: 100%; opacity: 0.2; 
+                    }
+                    .btn:hover { 
+                        background: var(--main-color-dark-1);
+                     }
+                    .about-card:hover {
+                         transform: scale(1.1); 
+                        }
+                }
