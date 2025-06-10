@@ -1,7 +1,11 @@
 
 
-const hamburger = document.querySelectorAll(".hambuger");
 
+
+
+
+const hamburger = document.querySelector(".hamburger");
+const links = document.querySelectorAll(".nav-link");
 
 hamburger.addEventListener("click", () => {
     document.body.classList.toggle("open");
@@ -10,6 +14,7 @@ hamburger.addEventListener("click", () => {
 
 links.forEach(link => 
     link.addEventListener("click", () => {  
-    document.body.classList.remove("open");
-    document.body.classList.remove("stopScrolling");
-}));
+        document.body.classList.remove("open");
+        document.body.classList.remove("stopScrolling");
+    })
+);

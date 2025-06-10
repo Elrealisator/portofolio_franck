@@ -85,12 +85,6 @@ const images = document.querySelectorAll(".images img");
 const prev_btn  = document.querySelector(".prev-btn");
 const next_btn  = document.querySelector(".next-btn");
 
-
-
-
-
-
-
 prev_btn.addEventListener("click", () => {
     if(currentIndex == 0){
         currentIndex = 5;
