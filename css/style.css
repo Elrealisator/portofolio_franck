@@ -1657,3 +1657,158 @@ overflow: hidden;
                          transform: scale(1.1); 
                         }
                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style pour les modales de service */
+.modal-service {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Reste en place même en scrollant */
+    z-index: 1000; /* Par-dessus tout le reste */
+    left: 0;
+    top: 0;
+    width: 100%; /* Pleine largeur */
+    height: 100%; /* Pleine hauteur */
+    overflow: auto; /* Permet le défilement si le contenu est trop grand */
+    background-color: rgba(0,0,0,0.7); /* Fond noir semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-service.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content-service {
+    background-color: var(--card-color);
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px; /* Largeur maximale pour le contenu */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    overflow-y: auto; /* Permet le défilement si le contenu dépasse la hauteur */
+    max-height: 90vh; /* Limite la hauteur de la modale */
+}
+
+.modal-service.active .modal-content-service {
+    transform: translateY(0);
+}
+
+.modal-content-service h2 {
+    color: var(--heading-color);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 10px;
+}
+
+.modal-content-service p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.modal-content-service p strong {
+    color: var(--main-color);
+}
+
+.modal-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.modal-gallery img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.03);
+}
+
+.close-button {
+    color: var(--text-color);
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+/* Responsive pour les modales */
+@media (max-width: 768px) {
+    .modal-content-service {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .modal-content-service h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-content-service p {
+        font-size: 1rem;
+    }
+
+    .modal-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-gallery img {
+        height: auto;
+        max-height: 180px;
+    }
+}
